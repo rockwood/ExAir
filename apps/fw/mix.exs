@@ -42,8 +42,10 @@ defmodule Fw.Mixfile do
   end
 
   def aliases do
-    ["deps.precompile": ["nerves.precompile", "deps.precompile"],
-     "deps.loadpaths":  ["deps.loadpaths", "nerves.loadpaths"]]
+    [
+      "deps.precompile": ["nerves.precompile", "deps.precompile"],
+      "deps.loadpaths":  ["deps.loadpaths", "nerves.loadpaths"],
+      "firmware": ["ui.webpack", "firmware"]
+    ]
   end
-
 end
