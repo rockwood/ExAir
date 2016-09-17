@@ -11,7 +11,7 @@ config :ui, Ui.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [{Path.expand("node_modules/webpack/bin/webpack.js"), ["--watch", "--colors", "--progress"]}]
 
 
 # Watch static and templates for browser reloading.
