@@ -1,0 +1,2 @@
+defmodule Device do
+end
