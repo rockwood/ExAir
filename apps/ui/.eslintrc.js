@@ -4,7 +4,7 @@ module.exports = {
     sourceType: "module",
     ecmaFeatures: {
       jsx: true
-    },
+    }
   },
 
   plugins: [
@@ -29,6 +29,7 @@ module.exports = {
 
   rules: {
     "no-debugger": 0,
+    "no-console": 0,
     "no-var": 1,
     "no-unused-vars": 0,
 
