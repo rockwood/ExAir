@@ -1,8 +1,7 @@
 defmodule Ui.UserSocket do
   use Phoenix.Socket
 
-  ## Channels
-  # channel "room:*", Ui.RoomChannel
+  channel "sensors:*", Ui.SensorsChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
