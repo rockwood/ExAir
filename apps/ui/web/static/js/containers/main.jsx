@@ -1,5 +1,6 @@
 import React, { Component, PropTypes }  from 'react';
-import { LineChart, Line } from "recharts";
+import LineGraph from 'components/line-graph';
+import PieGraph from 'components/pie-graph';
 const { console } = window;
 
 class Main extends Component {
@@ -10,7 +11,6 @@ class Main extends Component {
 
   componentDidMount() {
     let { socket } = this.props
-    socket.connect();
     let channel = socket.channel('sensors:button', {});
     this.subscribeToChannel(channel);
   }
@@ -29,9 +29,19 @@ class Main extends Component {
   render() {
     let { data } = this.state;
     return (
-      <LineChart width={730} height={250} data={data}>
-        <Line type="monotone" dataKey="value" stroke="#8884d8" isAnimationActive={false} />
-      </LineChart>
+      <div className="row">
+        <div className="col-md-12">
+          <LineGraph data={data} />
+        </div>
+
+        <div className="col-md-6">
+          <PieGraph data={data} />
+        </div>
+
+        <div className="col-md-6">
+          <PieGraph data={data} />
+        </div>
+      </div>
     )
   }
 }

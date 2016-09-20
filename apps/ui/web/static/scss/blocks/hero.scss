@@ -1,0 +1,10 @@
+.hero {
+  color: #fff;
+  padding: 40px 0;
+  margin-bottom: 30px;
+  @include gradient-vertical(#82ca9d, darken(#82ca9d, 10));
+
+  h1 {
+    margin-top: 0;
+  }
+}

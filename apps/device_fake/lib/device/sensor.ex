@@ -23,7 +23,7 @@ defmodule Device.Sensor do
   end
 
   def handle_call(:read, _from, state) do
-    current = Enum.random([1, 2])
+    current = Enum.random(1..100)
     {:reply, current, Map.put(state, :current, current)}
   end
 end
